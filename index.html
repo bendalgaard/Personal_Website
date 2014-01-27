@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>bendalgaard.com</title>
-    <!-- Include the bootstrap stylesheets -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 	<link href="./styles/main.css" rel="stylesheet">
+	<style type="text/css"></style>
   </head>
  
   <body>
-	<div class="container">
-      <h1>Introduction</h1>
-	  <p>This is the personal website of Benjamin Dalgaard.  I am a Software Engineer and Adjunct Professor in the Chicago area.  This website is maintained mostly as a sandbox for my personal learning, but I also hope to post a little information about myself here for those who are interested.</p>
-	  
-	  <h1>Purpose of this site</h1>
-	  <p>I currently work primarily on back-end systems. This site originated as a way to learn new technologies that I find interesting and want to learn more about.  Currently, that includes cloud computing with AWS, new languages such as Python and Go and the plenty of JavaScript libraries/frameworks that I wish I knew more about.</p>
-	  
-	  <h2>More to come&hellip;</h1>
-	  <p>Clearly, there is not a lot of information here at the moment. I will have more in the future, but if you are looking for more current information about me I suggest taking a look at my <a href=http://www.linkedin.com/in/bendalgaard target=blank>LinkedIn profile</a>.  It has (mostly) up to date information about my professional work.</p>
- 
+  <div id="wrap">
+	  <div class="container">
+        <h1>Introduction</h1>
+	    <p>This is the personal website of Benjamin Dalgaard.  I am a Software Engineer and Adjunct Professor in the Chicago area.  This website is maintained mostly as a sandbox for my personal learning, but I also hope to post a little information about myself here for those who are interested.</p>
+	    
+	    <h1>Purpose of this site</h1>
+	    <p>I currently work primarily on back-end systems. This site originated as a way to learn new technologies that I find interesting and want to learn more about.  Currently, that includes cloud computing with AWS, new languages such as Python and Go and the plenty of JavaScript libraries/frameworks that I wish I knew more about.</p>
+	    
+	    <h2>More to come&hellip;</h1>
+	    <p>Clearly, there is not a lot of information here at the moment. I will have more in the future, but if you are looking for more current information about me I suggest taking a look at my <a href=http://www.linkedin.com/in/bendalgaard target=blank>LinkedIn profile</a>.  It has (mostly) up to date information about my professional work.</p>
+      
+      </div>
+	  <!-- end container -->
+	  <div id="push"></div>
+	</div>
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted"><a href=http://bendalgaard.com>bendalgaard.com</a></p>
+      </div>
     </div>
-    <!-- JavaScript placed at the end of the document so the pages load faster -->
+	
+	<!-- Optional: Include the jQuery library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	
 	<!-- Site specific JavaScript -->
 	<script src="./scripts/main.js"></script>
 	
-    <!-- Optional: Include the jQuery library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
- 
-    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript placed at the end of the document so the pages load faster -->
+	<script type="text/javascript">
+        $(document).ready(function() {
+        });
+    </script>
+    
   </body>
 </html>

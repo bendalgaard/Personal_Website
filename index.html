@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>bendalgaard.com</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" ></link>
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" ></link>
-	<link href="./styles/main.css" rel="stylesheet" ></link>
+<head>
+	<meta charset="utf-8">
+	<title>bendalgaard.com</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" ></link>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" ></link>
+	<link href="./static/css/main.css" rel="stylesheet" ></link>
 	<style type="text/css" ></style>
-  </head>
- 
-  <body>
-  <div id="wrap">
-	  <div class="container">
-        <h1>Introduction</h1>
-	    <p>This is the personal website of Benjamin Dalgaard.  I am a Software Engineer and Adjunct Professor in the Chicago area.  This website is maintained mostly as a sandbox for my personal learning, but I also hope to post a little information about myself here for those who are interested.</p>
-	    <h1>Purpose of this site</h1>
-	    <p>I currently work primarily on back-end systems. This site originated as a way to learn new technologies that I find interesting and want to learn more about.  Currently, that includes cloud computing with AWS, new languages such as Python and Go and the plenty of JavaScript libraries/frameworks that I wish I knew more about.</p>
-	    
-	    <h2 class="italic">More to come&hellip;</h1>
-	    <p>Clearly, there is not a lot of information here at the moment. I will have more in the future, but if you are looking for more current information about me I suggest taking a look at my <a href=http://www.linkedin.com/in/bendalgaard target=_blank>LinkedIn profile</a>.  It has (mostly) up to date information about my professional work.</p>
-      
-      </div>
-	  <!-- end container -->
-	  <div id="push"></div>
-	</div>
-	<div id="footer">
-      <div class="container">
-	    <table id=footerTable>
-		  <tr>
-		    <td>
-              <a class="text-muted" href="http://bendalgaard.com" >bendalgaard.com</a>
-		    </td>
-			<td>
-              <a href="http://github.com/bendalgaard" target="_blank" >
-				<img src="resources/GitHub-Mark-32px.png" ></img>
-		      </a>
-		    </td>
-			<td>
-              <a href="http://www.linkedin.com/in/bendalgaard" target="_blank" >
-				<img src="resources/InBug-30px-R.png" ></img>
-		      </a>
-			  <!--New line for github-->
-		    </td>
-			<td>
-              <a href="http://twitter.com/bendalgaard" target="_blank" >
-				<img src="resources/Twitter_logo_blue.png" ></img>
-		      </a>
-		    </td>
-		  </tr>
-		</table>
-      </div>
-    </div>
-	
-	<!-- JavaScript placed at the end of the document so the pages load faster -->
-	<!-- Optional: Include the jQuery library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script>
+</head>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" ></script>
-	
-	<!-- Site specific JavaScript -->
-	<script src="./scripts/konami.js" ></script>
-	<script src="./scripts/main.js" ></script>
-	
-	<script type="text/javascript" >
-        $(document).ready(function() {
-        });
-    </script>
-    
-  </body>
+<body>
+	<div id="wrap">
+<!-- Navigation bar
+	================================================== -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" 
+			data-target="#example-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="http://bendalgaard.com">Ben Dalgaard</a>
+	</div>
+	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="./resume.html">Resume</a></li>
+
+		</ul>
+	</div>
+</nav>
+<!-- container ================================================== -->
+
+<div class="container">
+	<h1>Introduction</h1>
+	<p>This is the personal website of Benjamin Dalgaard.  I am a Software Engineer and Adjunct Professor in the Chicago area.  This website is maintained mostly as a sandbox for my personal learning, but I also hope to post a little information about myself here for those who are interested.</p>
+	<h1>Purpose of this site</h1>
+	<p>I currently work primarily on back-end systems. This site originated as a way to learn new technologies that I find interesting and want to learn more about.  Currently, that includes cloud computing with AWS, new languages such as Python and Go and the plenty of JavaScript libraries/frameworks that I wish I knew more about.</p>
+
+	<h2 class="italic">More to come&hellip;</h2>
+		<p>Clearly, there is not a lot of information here at the moment. I will have more in the future, but if you are looking for more current information about me I suggest taking a look at my <a href=http://www.linkedin.com/in/bendalgaard target=_blank>LinkedIn profile</a>.  It has (mostly) up to date information about my professional work.</p>
+
+	</div>
+	<!-- end container -->
+	<div id="push"></div>
+</div>
+<div id="footer">
+	<div class="container">
+		<table id="footerTable">
+			<tr>
+				<td>
+					<a class="text-muted" href="http://bendalgaard.com" >bendalgaard.com</a>
+				</td>
+				<td>
+					<a href="http://github.com/bendalgaard" target="_blank" >
+						<img src="resources/GitHub-Mark-32px.png" ></img>
+					</a>
+				</td>
+				<td>
+					<a href="http://www.linkedin.com/in/bendalgaard" target="_blank" >
+						<img src="resources/InBug-30px-R.png" ></img>
+					</a>
+					<!--New line for github-->
+				</td>
+				<td>
+					<a href="http://twitter.com/bendalgaard" target="_blank" >
+						<img src="resources/Twitter_logo_blue.png" ></img>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<!-- JavaScript placed at the end of the document so the pages load faster -->
+<!-- Optional: Include the jQuery library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" ></script>
+
+<!-- Site specific JavaScript -->
+<script src="./static/js/konami.js" ></script>
+<script src="./static/js/main.js" ></script>
+
+<script type="text/javascript" >
+	$(document).ready(function() {
+	});
+</script>
+
+</body>
 </html>

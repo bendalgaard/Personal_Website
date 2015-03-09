@@ -1,1 +1,1 @@
-var easter_egg = new Konami(function() { alert('Konami code!')});
+var easter_egg = new Konami(function() { $("#snippets-nav").removeClass('hide');});

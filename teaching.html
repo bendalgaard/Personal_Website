@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bendalgaard.com</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+	<link href="./static/css/main.css" rel="stylesheet" />
+	<style type="text/css" ></style>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- container ================================================== -->
+		<div class="container">
+			<!-- navigation bar ================================================== -->
+			<nav class="navbar navbar-inverse navbar-fixed-top container" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://bendalgaard.com">Ben Dalgaard</a>
+				</div>
+				<div class="collapse navbar-collapse" id="example-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="./resume.html">Resume</a></li>
+						<li id="snippets-nav" class="hide"><a href="./snippets.html">Snippets</a></li>
+					</ul>
+				</div>
+			</nav><!-- end header nav -->
+
+			<h1>Teaching Experience</h1>
+			<table id="table"></table>
+
+		</div><!-- end container-->
+		
+	</div><!-- end wrap-->
+
+	<!-- JavaScript placed at the end of the document so the pages load faster -->
+	<!-- Optional: Include the jQuery library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" ></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+
+	<!-- Latest compiled and minified Locales -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/locale/bootstrap-table-zh-CN.min.js"></script>
+
+	<!-- Site specific JavaScript -->
+	<script src="./static/js/konami.js" ></script>
+	<script src="./static/js/main.js" ></script>
+
+	<script type="text/javascript" >
+		$(document).ready(function() {
+		});
+
+		$('#table').bootstrapTable({
+			 columns: [{
+				field: 'courseNumber',
+				title: 'Course Number',
+				sortable: true
+			 }, {
+				field: 'courseName',
+				title: 'Course Name',
+				sortable: true
+			 }, {
+				field: 'term',
+				title: 'Term',
+				sortable: true,
+				sorter: 'courseTermSorter'
+			 }, {
+				field: 'university',
+				title: 'University',
+				sortable: true
+			 }, {
+				field: 'role',
+				title: 'Role',
+				sortable: true
+			 }],
+			 data: [{
+				courseNumber: 'MIS365',
+				section: 61,
+				courseName: 'Database Design and Implementation',
+				term: 'Spring 2015',
+				date: '2015-04-01',
+				university: 'Northwestern',
+				school: 'SPS',
+				degree: 'undergraduate',
+				role: 'Teaching Assistant'
+			 }, {
+				courseNumber: 'MIS417',
+				section: 59,
+				courseName: 'Database Design and Implementation',
+				term: 'Winter 2015',
+				date: '2015-01-01',
+				university: 'Northwestern',
+				school: 'SPS',
+				degree: 'graduate',
+				role: 'Adjunct Lecturer'
+			 }, {
+				courseNumber: 'MIS417',
+				section: 59,
+				courseName: 'Database Design and Implementation',
+				term: 'Winter 2015',
+				date: '2015-01-01',
+				university: 'Northwestern',
+				school: 'SPS',
+				degree: 'graduate',
+				role: 'Adjunct Lecturer'
+			 }, {
+				courseNumber: 'MIS417',
+				section: 61,
+				courseName: 'Database Design and Implementation',
+				term: 'Fall 2014',
+				date: '2014-09-01',
+				university: 'Northwestern',
+				school: 'SPS',
+				degree: 'graduate',
+				role: 'Adjunct Lecturer'
+			 }]
+		});
+	</script>
+
+</body>
+</html>

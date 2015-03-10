@@ -65,69 +65,30 @@
 		});
 
 		$('#table').bootstrapTable({
-			 columns: [{
+			url: 'http://bendalgaard.com/data/teaching.json',
+			contentType: 'application/json',
+			columns: [{
 				field: 'courseNumber',
 				title: 'Course Number',
 				sortable: true
-			 }, {
+			}, {
 				field: 'courseName',
 				title: 'Course Name',
 				sortable: true
-			 }, {
+			}, {
 				field: 'term',
 				title: 'Term',
 				sortable: true,
 				sorter: 'courseTermSorter'
-			 }, {
+			}, {
 				field: 'university',
 				title: 'University',
 				sortable: true
-			 }, {
+			}, {
 				field: 'role',
 				title: 'Role',
 				sortable: true
-			 }],
-			 data: [{
-				courseNumber: 'MIS365',
-				section: 61,
-				courseName: 'Database Design and Implementation',
-				term: 'Spring 2015',
-				date: '2015-04-01',
-				university: 'Northwestern',
-				school: 'SPS',
-				degree: 'undergraduate',
-				role: 'Teaching Assistant'
-			 }, {
-				courseNumber: 'MIS417',
-				section: 59,
-				courseName: 'Database Design and Implementation',
-				term: 'Winter 2015',
-				date: '2015-01-01',
-				university: 'Northwestern',
-				school: 'SPS',
-				degree: 'graduate',
-				role: 'Adjunct Lecturer'
-			 }, {
-				courseNumber: 'MIS417',
-				section: 59,
-				courseName: 'Database Design and Implementation',
-				term: 'Winter 2015',
-				date: '2015-01-01',
-				university: 'Northwestern',
-				school: 'SPS',
-				degree: 'graduate',
-				role: 'Adjunct Lecturer'
-			 }, {
-				courseNumber: 'MIS417',
-				section: 61,
-				courseName: 'Database Design and Implementation',
-				term: 'Fall 2014',
-				date: '2014-09-01',
-				university: 'Northwestern',
-				school: 'SPS',
-				degree: 'graduate',
-				role: 'Adjunct Lecturer'
-			 }]
+			}]
 		});
 	</script>
 

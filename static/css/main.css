@@ -19,6 +19,16 @@ body {
   padding: 70px 0 70px;
 }
 
+#toc-column {
+  position: fixed;
+}
+
+#toc-container {
+/*  position: fixed; */
+  height: 100%;
+  overflow: auto;
+}
+
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;

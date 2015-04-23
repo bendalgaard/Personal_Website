@@ -16,9 +16,9 @@
 
 <body>
 	<div id="flashcard-row" class="row">
-		<div id="left-button" class="col-md-2">
-			<div class="centered">
-			    <button class="btn btn-large btn-primary" type="button">Submit</button>
+		<div id="previous-button" class="col-md-2">
+			<div class="col-centered">
+			    <button class="btn btn-large btn-primary" type="button">Previous</button>
 			</div>
 		</div>
 
@@ -27,15 +27,15 @@
 			
 
 			<div id="flashcard" class="flashcard">
-				<h1>
-					test
-				</h1>
+				
 			</div>
 			
 
 		</div><!-- end container-->
-		<div id="right-button" class="col-md-2">
-			button
+		<div id="next-button" class="col-md-2">
+			<div class="col-centered">
+			    <button class="btn btn-large btn-primary" type="button">Next</button>
+			</div>
 		</div>
 		
 	</div><!-- end wrap-->
@@ -53,8 +53,57 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/locale/bootstrap-table-zh-CN.min.js"></script>
 
 	<!-- Site specific JavaScript -->
-	<script src="./static/js/konami.js" ></script>
-	<script src="./static/js/main.js" ></script>
+
+	<script type="text/javascript" >
+		$(document).ready(function() {
+		});
+
+		var items_position = -1;
+		var items;
+
+		var json = (function () {
+		    var json = null;
+		    $.ajax({
+		        'async': true,
+		        'global': false,
+		        'url': "http://bendalgaard.com/data/flashcards.json",
+		        'dataType': "json",
+		        'success': function (data) {
+		            json = data;
+		            items = data;
+		            /* Choose random item */
+					items_position = Math.floor(Math.random() * json.length);
+
+					setFlashcardText(json[items_position].question);
+		        },
+		        'error': function (data) {
+		            json = '[{"question": "<div style=\'color:#FF0000\'>Error: data could not be loaded</div>","answer":""}]';
+
+		            /* For local testing */
+		            
+		            json = '[{"question": "REST - Representational State Transfer <ul><li>GET</li><li>PUT</li><li>POST</li><li>DELETE</li></ul>","answer":""}, {"question": "OSI Model","answer":""}]';
+
+		            setFlashcardText(json[0].question);
+		        }
+		    });
+		    return json;
+		})(); 
+
+		$('#next-button').on('click', function () {
+			items_position = (items_position < items.length - 1) ? (items_position+1) : 0;
+			setFlashcardText(items[items_position].question);
+		});
+
+		$('#previous-button').on('click', function () {
+			items_position = (items_position > 0) ? (items_position-1) : (items.length - 1);
+			setFlashcardText(items[items_position].question);
+		});
+
+		function setFlashcardText(textValue) {
+			$('div.flashcard').html(textValue);
+		}
+
+	</script>
 
 </body>
 </html>

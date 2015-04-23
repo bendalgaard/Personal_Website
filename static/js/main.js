@@ -1,4 +1,7 @@
-var easter_egg = new Konami(function() { $("#snippets-nav").removeClass('hide');});
+var easter_egg = new Konami(function() { 
+	$("#snippets-nav").removeClass('hide');
+	$("#flashcards-nav").removeClass('hide');
+});
 
 /**
 test1 = courseTermSorter('Spring 2015', 'Spring 2015') ==> 0
@@ -16,13 +19,13 @@ function courseTermSorter(a, b) {
 		    case "Spring":
 				return 20;
 				break;
-			case "Summer 1":
+			case "Summer1":
 				return 30;
 				break;
 			case "Summer":
 				return 40;
 				break;
-			case "Summer 2":
+			case "Summer2":
 				return 50;
 				break;
 			case "Fall":

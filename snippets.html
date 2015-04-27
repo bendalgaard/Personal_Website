@@ -20,6 +20,22 @@
 	<body>
 		<div id="wrap">
 			<div class="container">
+				<a href="https://news.ycombinator.com/item?id=9396116">Run previous command</a>
+				<pre>
+		    		<code class="Bash">
+!^ - the first argument from the previous command
+!$ - the last argument from the previous command
+!* - all of the arguments from the previous command
+!! - the entire previous command
+
+# For example:
+  $ apt-get install foo
+  # Crap
+  $ sudo !!
+		    		</code>
+	    		</pre>
+			</div>
+			<div class="container">
 				<p>Check for connectivity</p>
 				<pre>
 		    		<code class="Bash">

@@ -18,7 +18,7 @@
 	<div id="flashcard-row" class="row">
 		<div id="previous-button" class="col-md-2">
 			<div class="col-centered">
-			    <button class="btn btn-large btn-primary" type="button">Previous</button>
+				<button class="btn btn-large btn-primary" type="button">Previous</button>
 			</div>
 		</div>
 
@@ -34,7 +34,7 @@
 		</div><!-- end container-->
 		<div id="next-button" class="col-md-2">
 			<div class="col-centered">
-			    <button class="btn btn-large btn-primary" type="button">Next</button>
+				<button class="btn btn-large btn-primary" type="button">Next</button>
 			</div>
 		</div>
 		
@@ -62,31 +62,34 @@
 		var items;
 
 		var json = (function () {
-		    var json = null;
-		    $.ajax({
-		        'async': true,
-		        'global': false,
-		        'url': "http://bendalgaard.com/data/flashcards.json",
-		        'dataType': "json",
-		        'success': function (data) {
-		            json = data;
-		            items = data;
-		            /* Choose random item */
+			var json = null;
+			$.ajax({
+				'async': true,
+				'global': false,
+				'url': 'http://bendalgaard.com/data/flashcards.json',
+				//'url':'http://localhost/test.xml',
+				'dataType': "json",
+				'success': function (data) {
+					json = data;
+					items = data;
+					/* Choose random item */
 					items_position = Math.floor(Math.random() * json.length);
 
 					setFlashcardText(json[items_position].question);
-		        },
-		        'error': function (data) {
-		            json = '[{"question": "<div style=\'color:#FF0000\'>Error: data could not be loaded</div>","answer":""}]';
+				},
+				'error': function (data) {
+					json = '[{"question": "<div style=\'color:#FF0000\'>Error: data could not be loaded</div>","answer":""}]';
 
-		            /* For local testing */
-		            
-		            json = '[{"question": "REST - Representational State Transfer <ul><li>GET</li><li>PUT</li><li>POST</li><li>DELETE</li></ul>","answer":""}, {"question": "OSI Model","answer":""}]';
+					/* For local testing */
+					if (document.location.hostname == "localhost") {
+						json = '[{"category": "","question": "Fundamental theorem of arithmetic","answer": "In number theory, the fundamental theorem of arithmetic, also called the unique factorization theorem or the unique-prime-factorization theorem, states that every integer greater than 1 [note 1] either is prime itself or is the product of prime numbers, and that this product is unique, up to the order of the factors."},{"category": "","question": "REST - Representational State Transfer","answer":"<ul><li>GET</li><li>PUT</li><li>POST</li><li>DELETE</li></ul>"}]';
+					}
 
-		            setFlashcardText(json[0].question);
-		        }
-		    });
-		    return json;
+					items = jQuery.parseJSON(json);
+					setFlashcardText(items[0].question);
+				}
+			});
+			return json;
 		})(); 
 
 		$('#next-button').on('click', function () {

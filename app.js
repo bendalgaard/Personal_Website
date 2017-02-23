@@ -1,5 +1,5 @@
-# http://stackoverflow.com/a/13635318/906451
-# https://gist.github.com/ryanflorence/701407
+//http://stackoverflow.com/a/13635318/906451
+//https://gist.github.com/ryanflorence/701407
 
 var http = require("http"),
     url = require("url"),

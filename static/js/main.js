@@ -1,4 +1,4 @@
-var easter_egg = new Konami(function() { 
+var easter_egg = new Konami(function() {
 	$("#snippets-nav").removeClass('hide');
 	$("#flashcards-nav").removeClass('hide');
 });
@@ -13,11 +13,17 @@ test5 = courseTermSorter('Spring 2015', 'Winter 2015') ==> 1
 function courseTermSorter(a, b) {
 	function pickTerm(x) {
 		switch(x) {
-		    case "Winter":
+		  case "Winter":
 				return 10;
 				break;
-		    case "Spring":
+		  case "Spring":
 				return 20;
+				break;
+			case "Spring1":
+				return 21;
+				break;
+			case "Spring2":
+				return 22;
 				break;
 			case "Summer1":
 				return 30;
